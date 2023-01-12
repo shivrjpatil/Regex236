@@ -58,5 +58,18 @@ namespace RegulerExpression
                 Console.WriteLine("{0} not valid", MobileNumber);
             }
         }
+        public static void Validatepassword(string Password)
+        {
+            string pattern = "^[a-zA-Z0-9]{8,}$";
+
+            if (Regex.IsMatch(Password, pattern))
+            {
+                Console.WriteLine("{0} is valid", Password);
+            }
+            else
+            {
+                Console.WriteLine("{0} not valid", Password);
+            }
+        }
     }
 }
