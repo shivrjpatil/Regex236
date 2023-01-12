@@ -62,7 +62,8 @@ namespace RegulerExpression
         {
             // string pattern = "^[a-zA-Z0-9]{8,}$";
             // string pattern = "^[A-Z]{1,}[a-zA-Z0-9]{8,}$";
-            string pattern = "^[A-Z]{1,}[0-9]{1,}[a-zA-Z0-9]{8,}$";
+            //string pattern = "^[A-Z]{1,}[0-9]{1,}[a-zA-Z0-9]{8,}$";
+            string pattern = "^[!@#$^&*~]{1,}[A-Z]{1,}[0-9]{1,}[a-zA-Z0-9]{8,}$";
 
             if (Regex.IsMatch(Password, pattern))
             {
