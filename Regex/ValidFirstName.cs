@@ -64,6 +64,8 @@ namespace RegulerExpression
             // string pattern = "^[A-Z]{1,}[a-zA-Z0-9]{8,}$";
             //string pattern = "^[A-Z]{1,}[0-9]{1,}[a-zA-Z0-9]{8,}$";
             string pattern = "^[!@#$^&*~]{1,}[A-Z]{1,}[0-9]{1,}[a-zA-Z0-9]{8,}$";
+            
+
 
             if (Regex.IsMatch(Password, pattern))
             {
@@ -72,6 +74,27 @@ namespace RegulerExpression
             else
             {
                 Console.WriteLine("{0} not valid", Password);
+            }
+        }
+        public static void validateGivenEmails()
+        {
+            string pattern = "^[a-zA-Z]{3}[_,.,+,-]?[a-zA-Z0-9]*@[a-zA-Z0-9]{1,10}.(com|com.au|net|co.in|com.com)$";
+            string[] arr = { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com", "abc-100@abc.net", "abc.100@abc.com.au", "abc@1.com" ,"abc@gmail.com.com", "abc+100@gmail.com" };
+            TestPattern(pattern, arr);
+        }
+        //Created Test pattern method
+        public static void TestPattern(string pattern, string[] arr)
+        {
+            foreach (string inputs in arr)
+            {
+                if (Regex.IsMatch(inputs, pattern))
+                {
+                    Console.WriteLine("{0} is valid", inputs);
+                }
+                else
+                {
+                    Console.WriteLine("{0} is invalid", inputs);
+                }
             }
         }
     }

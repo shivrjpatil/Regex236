@@ -12,7 +12,7 @@ namespace RegulerExpression
         {
             Console.WriteLine("Reguler Expression");
             Console.WriteLine("Choose one option");
-            Console.WriteLine("1.To Validate FirstName\n2.To Validate lastName\n3.To Validate EmailId\n4.To Validate MobileNumber\n5.To Validate password");
+            Console.WriteLine("1.To Validate FirstName\n2.To Validate lastName\n3.To Validate EmailId\n4.To Validate MobileNumber\n5.To Validate password\n6.To validate all Given Email Samples");
             int option=Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -40,6 +40,9 @@ namespace RegulerExpression
                     Console.WriteLine("Enter the Password");
                     string Password=Console.ReadLine();
                     Validate.Validatepassword(Password);
+                    break;
+                case 6:
+                    Validate.validateGivenEmails();
                     break;
 
             }
