@@ -46,5 +46,17 @@ namespace RegulerExpression
                     Console.WriteLine("{0} not valid", Email);
                 }
         }
+        public static void ValidateMobileNumber(string MobileNumber)
+        {
+            string pattern = "^[0-9]{2}[ ]{1}[0-9]{10}$";
+            if (Regex.IsMatch(MobileNumber, pattern))
+            {
+                Console.WriteLine("{0} is valid", MobileNumber);
+            }
+            else
+            {
+                Console.WriteLine("{0} not valid", MobileNumber);
+            }
+        }
     }
 }
